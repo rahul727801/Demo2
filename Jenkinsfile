@@ -4,18 +4,11 @@
 pipeline {
   agent any
 
-  // Tools: set the labels that match your Jenkins global tool configuration (optional)
-  tools {
-    // Change these names to the ones configured on your Jenkins master/agents
-    // Example: maven 'M3' and nodejs 'NodeJS'
-    //maven 'Maven 3.6.3'
-    //nodejs 'NodeJS'
-  }
+  
 
   environment {
     // Example env vars - change or remove as needed
-    IMAGE_NAME = "myorg/demo2"           // change if building Docker images
-    DOCKER_REGISTRY = "registry.hub.docker.com"
+    IMAGE_NAME = "myorg/demo2"           // change if building Docker images    DOCKER_REGISTRY = "registry.hub.docker.com"
     // CREDENTIAL IDS: create credentials in Jenkins and replace these IDs
     DOCKER_CREDENTIALS = 'docker-creds-id'
     MAVEN_SETTINGS_CREDENTIALS = 'maven-settings-id' // optional for private repos
